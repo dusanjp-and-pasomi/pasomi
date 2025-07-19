@@ -1,17 +1,17 @@
 #!/bin/bash
-cd node
-mv data ../
-mv dbdata ../
-mv docker-compose.yaml ../
-mv docker-compose-recovery.yaml ../
-mv keys ../
-mv logs ../
-mv mongo ../
-mv rest-cache ../
-mv seed ../
-mv startup ../
-mv userconfig ../
-mv linking_transaction.dat ../
-mv unlink ../
-mv https-proxy ../
-mv renew_voting_keys_transaction.dat ../
+mkdir -p node
+mv data node/
+mv dbdata node/
+mv docker-compose.yaml node/
+mv docker-compose-recovery.yaml node/
+mv keys node/
+mv logs node/
+mv mongo node/
+mv rest-cache node/
+mv seed node/
+mv startup node/
+mv userconfig node/
+mv linking_transaction.dat node/
+mv unlink node/
+mv https-proxy node/
+mv renew_voting_keys_transaction.dat node/
