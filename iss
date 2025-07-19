@@ -1,0 +1,215 @@
+#!/bin/bash
+#💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕
+#
+#💖💖💖 ぱそ美🌺ちゃんの💕 symbol-shoestring インストーラ「iss」💖💖
+#
+#実行方法だよ💕
+#この shellscript を保存した後にねっ❓
+#👇
+#chmod +x iss && ./iss
+#👆を実行すると、symbol-shoestring がインストールされるわ🌺
+#
+#
+#
+#symbol-shoestring が実行できる環境への入り方よ🌻
+#
+#source ~/env/bin/activate
+#👆を実行すると❓環境に入れるわ🌺
+#
+#環境から出る時はね❓
+#deactivate
+#👆を実行すると❓環境から出れるわ🌻
+#
+#💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕
+
+
+echo -e '\e[45m'
+echo '💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖'
+echo '💖💖💖うふふっ🌺ぱそ美だよっ💖💖💖'
+echo '💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖'
+echo 'これからぁ❓symbol-shoestringを？インストールしまぁ〜す❗🌻'
+echo '準備はい〜い❓'
+echo 
+echo '🌺 symbol-shoestring インストーラ「iss」の動かし方🌺'
+echo 
+echo '👇これが開始のコマンドだよ🌻'
+echo 'chmod +x iss && ./iss'
+echo '👆で開始した❓やってなかったらぁ❓ちゃぁんと動きません❗なの🐽'
+echo 'chmod +x iss && ./iss[enter]だよ🌺'
+echo 
+echo '👆を読んでぇ？やってなかったら❓ [CRTL]c でこれを止めてね🌺うふふっ'
+echo '👆で開始してたらぁ❓そしたらぁ❓ [ENTER] でぇ？先にすすんじゃいましょお🌻'
+echo '🌻 [ENTER] を押してすすむ🌻'
+read ufufu
+echo 'もうやってるって人はぁ❓このままいっちゃおー❗おー❗❗❗🌻'
+echo -e '\e[0m'
+echo 
+echo 
+
+cd
+echo -e '\e[45m'
+echo '🌺 アップデートが可能なパッケージのリストを更新しまぁーす🌺'
+echo -e '\e[0m'
+sudo apt update
+
+echo -e '\e[45m'
+echo '🌺 venvをインストールしまぁーす🌺'
+echo -e '\e[0m'
+version=$(python3 -V | sed 's/^P/p/; s/ //g' | sed 's/\.[^\.]*$//')
+sudo apt install -y $version-venv
+
+echo -e '\e[45m'
+echo '🌺 $HOMEにぃ❓symbol-shoestring用の❓Python環境「env」を❓つくりまぁーす🌺'
+echo -e '\e[0m'
+python3 -m venv env
+
+echo -e '\e[45m'
+echo '🌺 symbol-shoestring用の❓Python環境の「env」に入りまぁーす🌺'
+echo -e '\e[0m'
+source ~/env/bin/activate
+
+echo -e '\e[45m'
+echo '🌺 必要なライブラリを❓インストールしまぁーす🌺'
+echo -e '\e[0m'
+sudo apt install -y gettext
+sudo apt-get install -y libssl-dev
+sudo apt install -y build-essential python3-dev
+
+echo -e '\e[45m'
+echo '🌺 じゃあ？いくわよ❓symbol-shoestring本体を？インストールするわ❗❗❗🌺'
+echo '🌻 [ENTER] を押してインストール🌺すたーとぉ❗🌻'
+read ufufu
+echo -e '\e[0m'
+pip install symbol-shoestring
+
+-e '\e[45m'
+echo 
+echo '🌺日本語ファイルをダウンロードをするわ🌺'
+echo -e '\e[0m'
+jpLangPath=$(pip show symbol-shoestring | grep Location | sed 's/Location: //')/shoestring/lang/ja/LC_MESSAGES
+
+cd $jpLangPath
+rm -f *
+wget https://github.com/ccHarvestasya/product/raw/refs/heads/shoestring/japanese_lang_support/tools/shoestring/shoestring/lang/ja/LC_MESSAGES/messages.po
+
+msgfmt messages.po -o messages.mo
+
+
+echo -e '\e[45m'
+echo '🌺 さぁ❓symbol-shoestringがちゃあんとインストールできてるかしら❓みてみましょう🌺'
+echo '🌻 [ENTER] を押してすすむ🌻'
+read ufufu
+echo -e '\e[0m'
+pip list|grep shoestring
+
+echo -e '\e[45m'
+echo '🌺 どぉお❓👆にsymbol-shoestringってでてる❓でてたら大成功ぉ🌻なの🌺'
+echo '🌻 [ENTER] を押してすすむ🌻'
+read ufufu
+echo -e '\e[0m'
+
+echo -e '\e[45m'
+echo '🌺 ちゃあんと symbol-shoestringがインストールされてたらぁ❓👇にヘルプが出るわ🌺'
+echo '🌻 [ENTER] を押してすすむ🌻'
+echo -e '\e[0m'
+python3 -m shoestring -h
+
+echo -e '\e[45m'
+echo '🌺つづいてぇ？🇯🇵 日本語🇯🇵 で表示しまぁ〜す🌺'
+echo '🌻 [ENTER] を押してすすむ🌻'
+read ufufu
+echo -e '\e[0m'
+echo 
+LC_MESSAGES=ja python3 -m shoestring -h
+echo -e '\e[45m'
+echo '🌻 はぁ〜い🌺 symbol-shoestringの？インストール作業はぁ❓おっしまぁ〜い🌻'
+echo '👆にヘルプは表示されたぁ❓ヘルプが表示されてたらぁ❓大成功よっ💕'
+echo '🌺 どぉお❓入った❓入ってなかったらぁ❓ごめぇ〜ん💖うふふっうふふっうふふふっっ🌺'
+echo '🌻 [ENTER] を押してすすむ🌻'
+read ufufu
+echo -e '\e[0m'
+
+echo 
+echo 
+echo 'あっ🌺そぉだ❗'
+echo 'symbol-shoestringを使う時はねっ❓Python環境「env」に入るのよっ❓'
+echo 
+echo '「source ~/env/bin/activate」'
+echo 'または🌻「ee」'
+echo '👆を❓命令してねっ💕'
+echo 
+echo '👇を命令すると❓「env」環境から出れるよっ💖'
+echo '「deactivate」'
+echo 'または🌻「de」'
+echo 
+echo '🌻 [ENTER] を押してすすむ🌻'
+read ufufu
+echo 
+echo '🌻🌻🌻🌻🌻🌻🌻🌻🌻🌻🌻🌻🌻🌻🌻🌻🌻🌻🌻🌻'
+echo '🌻 ちょっと楽に入力できる様にしたの💕 🌻'
+echo '🌻🌻🌻🌻🌻🌻🌻🌻🌻🌻🌻🌻🌻🌻🌻🌻🌻🌻🌻🌻'
+echo 
+echo '「python3 -m shoestring」って打たなくても❓'
+echo '「ssc」で❓コマンドが使える様にしたよ🌻'
+echo '「jsc」だと❓日本語のメッセージになるよ💐'
+echo 
+echo 'それとぉ❓「python3 -m shoestring.wizard」って打たなくても？'
+echo '「ssw」で❓ウィザードが始まる様にしたよ🌻'
+echo '「jsw」で❓日本語のウィザードが始まる様にしたよ💐'
+echo 
+echo 'あとね❓'
+echo '「ja ssc」とか❓「ja ssw」って打ち方でも🌺日本語表示になるよ🌻'
+echo 
+echo '🌻 [ENTER] を押してすすむ🌻'
+read ufufu
+echo 
+echo 
+echo '💖 それじゃあ🌺 symbol-shoestringをいっぱい使ってねっ💖うふふっ💕'
+echo 
+echo -e '\e[45m'
+echo '💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖'
+echo '💖💖💖うふふっ💕おあいてはぁ❓きょにゅーの💖ぱそ美🌺ちゃんでしたっ💖💖💖'
+echo '💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖'
+echo -e '\e[0m'
+
+cd
+mv .bashrc_bak2 .bashrc
+cp .bashrc .bashrc_bak2
+cat << __EOD__ >> .bashrc
+
+#alias2_for_shoestring
+alias ssc="python3 -m shoestring"
+alias ssw="python3 -m shoestring.wizard"
+alias jsc="LC_MESSAGES=ja python3 -m shoestring"
+alias jsw="LC_MESSAGES=ja python3 -m shoestring.wizard"
+alias ja="LC_MESSAGES=ja"
+alias ee="source ~/env/bin/activate"
+alias de="deactivate"
+alias rec="docker compose -f docker-compose-recovery.yaml up --abort-on-container-exit"
+__EOD__
+
+exec $SHELL -l
+
+#💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕
+#
+#💖💖💖 ぱそ美🌺ちゃんの💕 symbol-shoestring インストーラ「iss」💖💖
+#
+#実行方法だよ💕
+#この shellscript を保存した後にねっ❓
+#👇
+#chmod +x iss && ./iss
+#👆を実行すると、symbol-shoestring がインストールされるわ🌺
+#
+#
+#
+#symbol-shoestring が実行できる環境への入り方よ🌻
+#
+#source ~/env/bin/activate
+#👆を実行すると❓環境に入れるわ🌺
+#
+#環境から出る時はね❓
+#deactivate
+#👆を実行すると❓環境から出れるわ🌻
+#
+#💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕
+
