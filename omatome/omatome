@@ -1,0 +1,17 @@
+#!/bin/bash
+cd node
+mv data ../
+mv dbdata ../
+mv docker-compose.yaml ../
+mv docker-compose-recovery.yaml ../
+mv keys ../
+mv logs ../
+mv mongo ../
+mv rest-cache ../
+mv seed ../
+mv startup ../
+mv userconfig ../
+mv linking_transaction.dat ../
+mv unlink ../
+mv https-proxy ../
+mv renew_voting_keys_transaction.dat ../
