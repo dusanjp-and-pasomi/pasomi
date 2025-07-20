@@ -12,7 +12,7 @@ Run it where docker-compose.yaml is located💕.
 
 omodosiの説明だよ🌺
 nodeディレクトリにまとめた node本体を元の場所に戻すの💖
-docker-compose.yamlがある nodeディレクトリで実行してね💕
+nodeディレクトリがあるディレクトリで実行してね💕
 
 Here's an explanation of omodosi🌺
 Return the node body that was put together in the node directory to its original location💖
