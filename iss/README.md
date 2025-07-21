@@ -7,6 +7,7 @@
 
 実行方法だよ💕
 homeディレクトリで実行するのがいいわねっ💖
+wget https://github.com/dusanjp-and-pasomi/pasomi/raw/refs/heads/main/iss/iss
 
 この shellscript を保存した後にねっ❓
 👇
@@ -33,6 +34,7 @@ deactivate
 
 How to run it💕
 It's best to run it in your home directory💖
+wget https://github.com/dusanjp-and-pasomi/pasomi/raw/refs/heads/main/iss/iss
 
 After saving this shellscript❓
 👇
