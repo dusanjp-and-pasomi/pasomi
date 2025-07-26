@@ -33,7 +33,8 @@ git clone https://github.com/dusanjp-and-pasomi/pasomi/raw/refs/heads/main/venli
 
 After saving this shellscript❓
 👇
-When you run chmod +x venlib && ./venlib
+When you run
+chmod +x venlib && ./venlib
 👆, the ❓
 💡venv💡 and ❓💡libraries💡 required for the symbol-shoestring environment will be installed🌺
 
