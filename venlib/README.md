@@ -6,6 +6,10 @@
 venlibは❓issの一部です。うふふっ💕
 
 実行方法だよ💕
+$HOMEでやるのがいいわ🌻
+ダウンロードは❓
+git clone https://github.com/dusanjp-and-pasomi/pasomi/raw/refs/heads/main/venlib/venlib
+
 この shellscript を保存した後にねっ❓
 👇
 chmod +x venlib && ./venlib
@@ -23,6 +27,10 @@ libssl-dev（この２つで❓symbol-shoestringのインストールを可能�
 venlib is❓part of iss.ufufu💕
 
 Here's how to run it💕
+It's better to do it at $HOME🌻
+Download❓
+git clone https://github.com/dusanjp-and-pasomi/pasomi/raw/refs/heads/main/venlib/venlib
+
 After saving this shellscript❓
 👇
 When you run chmod +x venlib && ./venlib
