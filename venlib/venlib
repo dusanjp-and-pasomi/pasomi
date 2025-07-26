@@ -1,0 +1,61 @@
+#!/bin/bash
+#💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕
+#
+#💖💖💖 ぱそ美🌺ちゃんの💕 symbol-shoestring環境構築「venlib」💖💖
+#
+#実行方法だよ💕
+#この shellscript を保存した後にねっ❓
+#👇
+#chmod +x venlib && ./venlib
+#👆を実行すると、symbol-shoestring環境に必要な❓
+💡venv💡と❓💡ライブラリ💡が導入されるわ🌺
+#
+#💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕
+
+
+echo -e '\e[45m'
+echo '💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖'
+echo '💖💖💖うふふっ🌺ぱそ美だよっ💖💖💖'
+echo '💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖'
+echo 'これからぁ❓venvと❓ライブラリを❓インストールしまぁ〜す❗🌻'
+echo '準備はい〜い❓'
+echo 
+echo '🌺 symbol-shoestring環境構築「venlib」の動かし方🌺'
+echo 
+echo '👇これが開始のコマンドだよ🌻'
+echo 'chmod +x venlib && ./venlib'
+echo '👆で開始した❓やってなかったらぁ❓ちゃぁんと動きません❗なの🐽'
+echo 'chmod +x venlib && ./venlib[enter]だよ🌺'
+echo 
+echo '👆を読んでぇ？やってなかったら❓ [CRTL]c でこれを止めてね🌺うふふっ'
+echo '👆で開始してたらぁ❓そしたらぁ❓ [ENTER] でぇ？先にすすんじゃいましょお🌻'
+echo '🌻 [ENTER] を押してすすむ🌻'
+read ufufu
+echo 'もうやってるって人はぁ❓このままいっちゃおー❗おー❗❗❗🌻'
+echo -e '\e[0m'
+echo 
+echo 
+
+cd
+echo -e '\e[45m'
+echo '🌺 アップデートが可能なパッケージのリストを更新しまぁーす🌺'
+echo -e '\e[0m'
+sudo apt update
+
+echo -e '\e[45m'
+echo '🌺 venvをインストールしまぁーす🌺'
+echo -e '\e[0m'
+version=$(python3 -V | sed 's/^P/p/; s/ //g' | sed 's/\.[^\.]*$//')
+sudo apt install -y $version-venv
+
+echo -e '\e[45m'
+echo '🌺 必要なライブラリを❓インストールしまぁーす🌺'
+echo -e '\e[0m'
+sudo apt install -y gettext
+sudo apt-get install -y libssl-dev
+sudo apt install -y build-essential python3-dev
+
+echo -e '\e[45m'
+echo '🌺 これで🌻symbol-shoestringのインストールに必要な❓'
+echo '💡venv💡と💡ライブラリ💡が❓準備できましたぁ🌺'
+echo -e '\e[0m'
