@@ -173,8 +173,11 @@ echo '💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖💖�
 echo -e '\e[0m'
 
 cd
-mv .bashrc_bak2 .bashrc
-cp .bashrc .bashrc_bak2
+alias=`cat .bashrc|grep alias2_for_shoestring`
+if [ -n "$alias" ]; then
+  exit 1
+fi
+
 cat << __EOD__ >> .bashrc
 
 #alias2_for_shoestring
@@ -189,6 +192,7 @@ alias rec="docker compose -f docker-compose-recovery.yaml up --abort-on-containe
 __EOD__
 
 exec $SHELL -l
+
 
 #💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕
 #
