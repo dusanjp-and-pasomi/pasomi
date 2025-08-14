@@ -445,7 +445,7 @@ msgstr "bootstrap設定をインポートいたしますわ。💖うふふっ�
 
 #: shoestring/wizard/screens/bootstrap.py:28
 msgid "wizard-bootstrap-token-bootstrap-path"
-msgstr "ターゲットディレクトリでございますわ。💖うふふっ💕"
+msgstr "ターゲットディレクトリでございますわ。💕"
 
 #: shoestring/wizard/screens/bootstrap.py:27
 msgid "wizard-bootstrap-token-include-node-key"
@@ -473,7 +473,7 @@ msgstr "CA名をご入力くださいませ。💖うふふっ💕"
 
 #: shoestring/wizard/screens/certificates.py:32
 msgid "wizard-certificates-ca-cert-label"
-msgstr "Cert CA名でございますわ。💖うふふっ💕"
+msgstr "Cert CA名💖"
 
 #: shoestring/wizard/screens/certificates.py:38
 msgid "wizard-certificates-peer-cert-error-text"
@@ -481,7 +481,7 @@ msgstr "ピア名をご入力くださいませ。💖うふふっ💕"
 
 #: shoestring/wizard/screens/certificates.py:36
 msgid "wizard-certificates-peer-cert-label"
-msgstr "Cert ピア名でございますわ。💖うふふっ💕"
+msgstr "Cert ピア名💖"
 
 #: shoestring/wizard/screens/certificates.py:50
 msgid "wizard-certificates-title"
@@ -521,7 +521,7 @@ msgstr "受取人アドレスは適切なネットワーク内のアドレスで
 
 #: shoestring/wizard/screens/harvesting.py:145
 msgid "wizard-harvesting-beneficiary-address-label"
-msgstr "受取人アドレスでございますわ。💖うふふっ💕"
+msgstr "受取人アドレス💖"
 
 #: shoestring/wizard/screens/harvesting.py:129
 msgid "wizard-harvesting-delegate"
@@ -537,7 +537,7 @@ msgstr "最大アンロックアカウント値は数値である必要がござ
 
 #: shoestring/wizard/screens/harvesting.py:133
 msgid "wizard-harvesting-max-unlocked-accounts-label"
-msgstr "最大アンロックアカウント数でございますわ。💖うふふっ💕"
+msgstr "最大アンロックアカウント数💖"
 
 #: shoestring/wizard/screens/harvesting.py:141
 msgid "wizard-harvesting-min-fee-multiplier-error-text"
@@ -545,7 +545,7 @@ msgstr "最小手数料倍率値は数値である必要がございますわ。
 
 #: shoestring/wizard/screens/harvesting.py:139
 msgid "wizard-harvesting-min-fee-multiplier-label"
-msgstr "最小手数料倍率でございますわ。💖うふふっ💕"
+msgstr "最小手数料倍率💖"
 
 #: shoestring/wizard/screens/harvesting.py:122
 msgid "wizard-harvesting-signing-key-error-text"
@@ -553,7 +553,7 @@ msgstr "署名用秘密鍵は有効な16進数形式の秘密鍵文字列であ�
 
 #: shoestring/wizard/screens/harvesting.py:120
 msgid "wizard-harvesting-signing-key-label"
-msgstr "ハーベスター署名キーでございますわ。💖うふふっ💕"
+msgstr "ハーベスターREMOTEキー💖"
 
 #: shoestring/wizard/screens/harvesting.py:169
 msgid "wizard-harvesting-title"
@@ -561,31 +561,31 @@ msgstr "ハーベスター設定でございますわ。💖うふふっ💕"
 
 #: shoestring/wizard/screens/harvesting.py:79
 msgid "wizard-harvesting-token-active"
-msgstr "ハーベスター役割でございますわ。💖うふふっ💕"
+msgstr "ハーベスター設定でございますわ。💕"
 
 #: shoestring/wizard/screens/harvesting.py:82
 msgid "wizard-harvesting-token-auto-harvest"
-msgstr "* 自動ハーベスト？でございますわ。💖うふふっ💕"
+msgstr "* 自動ハーベスト設定でございますわ。💕"
 
 #: shoestring/wizard/screens/harvesting.py:87
 msgid "wizard-harvesting-token-beneficiary-address"
-msgstr "* 受取人アドレスでございますわ。💖うふふっ💕"
+msgstr "* 受取人アドレス💖"
 
 #: shoestring/wizard/screens/harvesting.py:84
 msgid "wizard-harvesting-token-delegate"
-msgstr "* 委任ハーベスターを自動検出？でございますわ。💖うふふっ💕"
+msgstr "* 委任ハーベスターの自動検出でございますわ。💕"
 
 #: shoestring/wizard/screens/harvesting.py:83
 msgid "wizard-harvesting-token-generate-keys"
-msgstr "* キー生成？でございますわ。💖うふふっ💕"
+msgstr "* キー生成でございますわ。💕"
 
 #: shoestring/wizard/screens/harvesting.py:85
 msgid "wizard-harvesting-token-max-unlocked-accounts"
-msgstr "* 最大アンロックアカウント数でございますわ。💖うふふっ💕"
+msgstr "* 最大アンロックアカウント数でございますわ。💕"
 
 #: shoestring/wizard/screens/harvesting.py:86
 msgid "wizard-harvesting-token-min-fee-multiplier"
-msgstr "* 最小手数料倍率でございますわ。💖うふふっ💕"
+msgstr "* 最小手数料倍率でございますわ。💕"
 
 #: shoestring/wizard/screens/harvesting.py:126
 msgid "wizard-harvesting-vrf-key-error-text"
@@ -593,7 +593,7 @@ msgstr "VRF秘密鍵は16進数形式でご入力くださいませ。💖うふ
 
 #: shoestring/wizard/screens/harvesting.py:124
 msgid "wizard-harvesting-vrf-key-label"
-msgstr "ハーベスターVRFキーでございますわ。💖うふふっ💕"
+msgstr "ハーベスターVRFキー💖"
 
 #: shoestring/wizard/__main__.py:104
 msgid "wizard-main-done"
@@ -605,7 +605,7 @@ msgstr "<b>ごきげんよう、操作をお選びくださいませ</b>。💖�
 
 #: shoestring/wizard/screens/modal.py:26
 msgid "wizard-modal-button-ok"
-msgstr "OKでございますわ！💖うふふっ💕"
+msgstr "OK❓"
 
 #: shoestring/wizard/screens/network_type.py:25
 msgid "wizard-network-type-mainnet"
@@ -621,11 +621,11 @@ msgstr "ネットワークタイプをお選びくださいませ。💖うふ�
 
 #: shoestring/wizard/screens/network_type.py:16
 msgid "wizard-network-type-token"
-msgstr "ネットワークタイプでございますわ。💖うふふっ💕"
+msgstr "ネットワークタイプでございますわ。💕"
 
 #: shoestring/wizard/screens/node_settings.py:90
 msgid "wizard-node-settings-friendly-name-label"
-msgstr "フレンドリーノード名でございますわ。💖うふふっ💕"
+msgstr "フレンドリーノード名💖"
 
 #: shoestring/wizard/screens/node_settings.py:54
 msgid "wizard-node-settings-https"
@@ -637,7 +637,7 @@ msgstr "httpsが選択されている場合は有効なホスト名が必要で�
 
 #: shoestring/wizard/screens/node_settings.py:66
 msgid "wizard-node-settings-ip-or-domain-name-label"
-msgstr "IPまたはドメイン名でございますわ。💖うふふっ💕"
+msgstr "IPまたはドメイン名💖"
 
 #: shoestring/wizard/screens/node_settings.py:73
 msgid "wizard-node-settings-metadata-info-error-text"
@@ -645,7 +645,7 @@ msgstr "メタデータは有効なJSON形式でご入力くださいませ。�
 
 #: shoestring/wizard/screens/node_settings.py:71
 msgid "wizard-node-settings-metadata-info-label"
-msgstr "ノードメタデータ情報（説明）でございますわ。💖うふふっ💕"
+msgstr "ノードメタデータ情報💖"
 
 #: shoestring/wizard/screens/node_settings.py:78
 msgid "wizard-node-settings-title"
@@ -653,19 +653,19 @@ msgstr "ノード設定でございますわ。💖うふふっ💕"
 
 #: shoestring/wizard/screens/node_settings.py:38
 msgid "wizard-node-settings-token-domain-name"
-msgstr "ドメイン名でございますわ。💖うふふっ💕"
+msgstr "ドメイン名でございますわ。💕"
 
 #: shoestring/wizard/screens/node_settings.py:39
 msgid "wizard-node-settings-token-friendly-name"
-msgstr "フレンドリーネームでございますわ。💖うふふっ💕"
+msgstr "フレンドリーネームでございますわ。💕"
 
 #: shoestring/wizard/screens/node_settings.py:37
 msgid "wizard-node-settings-token-https"
-msgstr "httpsでございますわ。💖うふふっ💕"
+msgstr "https設定でございますわ。💕"
 
 #: shoestring/wizard/screens/node_settings.py:40
 msgid "wizard-node-settings-token-metadata"
-msgstr "メタデータでございますわ。💖うふふっ💕"
+msgstr "メタデータでございますわ。💕"
 
 #: shoestring/wizard/screens/node_type.py:25
 msgid "wizard-node-type-dual"
@@ -685,7 +685,7 @@ msgstr "ノードタイプをお選びくださいませ。💖うふふっ💕"
 
 #: shoestring/wizard/screens/node_type.py:16
 msgid "wizard-node-type-token"
-msgstr "ノードタイプでございますわ。💖うふふっ💕"
+msgstr "ノードタイプでございますわ。💕"
 
 #: shoestring/wizard/screens/obligatory.py:122
 #: shoestring/wizard/screens/obligatory.py:130
@@ -699,7 +699,7 @@ msgstr "CA PEMパスは、既存のディレクトリ内の存在しないファ
 
 #: shoestring/wizard/screens/obligatory.py:128
 msgid "wizard-obligatory-ca-pem-path-label"
-msgstr "CA PEMファイルパス（メインアカウント）でございますわ。💖うふふっ💕"
+msgstr "CA PEMのパスでございますわ。💕"
 
 #: shoestring/wizard/screens/obligatory.py:109
 msgid "wizard-obligatory-destination-directory-error-text"
@@ -707,27 +707,27 @@ msgstr "有効な宛先ディレクトリをご指定くださいませ。💖�
 
 #: shoestring/wizard/screens/obligatory.py:107
 msgid "wizard-obligatory-destination-directory-label"
-msgstr "設定宛先ディレクトリでございますわ。💖うふふっ💕"
+msgstr "設定宛先ディレクトリでございますわ。💕"
 
 #: shoestring/wizard/screens/obligatory.py:142
 msgid "wizard-obligatory-generate-button"
-msgstr "生成いたしますわ！💖うふふっ💕"
+msgstr "生成💖"
 
 #: shoestring/wizard/screens/obligatory.py:141
 msgid "wizard-obligatory-import-button"
-msgstr "インポートいたしますわ！💖うふふっ💕"
+msgstr "インポート💖　　　"
 
 #: shoestring/wizard/screens/obligatory.py:113
 msgid "wizard-obligatory-priv-ca"
-msgstr "CA PEMファイルでございますわ。💖うふふっ💕"
+msgstr "CA PEMファイルでございますわ。💖"
 
 #: shoestring/wizard/screens/obligatory.py:115
 msgid "wizard-obligatory-priv-generate-new"
-msgstr "ランダムな秘密鍵を生成いたしますわ。💖うふふっ💕"
+msgstr "ランダムな秘密鍵を生成いたしますわ。💖"
 
 #: shoestring/wizard/screens/obligatory.py:114
 msgid "wizard-obligatory-priv-import-hex"
-msgstr "16進数形式でメイン秘密鍵をインポートいたしますわ。💖うふふっ💕"
+msgstr "16進数形式でメイン秘密鍵をインポートいたしますわ。💖"
 
 #: shoestring/wizard/screens/obligatory.py:146
 msgid "wizard-obligatory-private-key-ca-pem-path-description"
@@ -747,7 +747,7 @@ msgstr "16進数形式の秘密鍵である必要がございますわ。💖う
 
 #: shoestring/wizard/screens/obligatory.py:134
 msgid "wizard-obligatory-private-key-hex-label"
-msgstr "秘密鍵をご入力くださいませ。💖うふふっ💕"
+msgstr "秘密鍵をご入力くださいませ💖うふふっ💕"
 
 #: shoestring/wizard/screens/obligatory.py:177
 msgid "wizard-obligatory-title"
@@ -755,11 +755,11 @@ msgstr "必須設定でございますわ。💖うふふっ💕"
 
 #: shoestring/wizard/screens/obligatory.py:43
 msgid "wizard-obligatory-token-ca-pem-path"
-msgstr "CA PEMパスでございますわ。💖うふふっ💕"
+msgstr "CA PEMパスでございますわ。💕"
 
 #: shoestring/wizard/screens/obligatory.py:41
 msgid "wizard-obligatory-token-destination-directory"
-msgstr "宛先ディレクトリでございますわ。💖うふふっ💕"
+msgstr "宛先ディレクトリでございますわ。💕"
 
 #: shoestring/wizard/screens/root_check.py:27
 msgid "wizard-root-check-error-text"
@@ -799,11 +799,11 @@ msgstr "ごきげんようでございますわ。💖うふふっ💕"
 
 #: shoestring/wizard/styles.py:39
 msgid "wizard-toggle-disabled"
-msgstr "無効でございますわ。💖うふふっ💕"
+msgstr "無効でございますわ💖"
 
 #: shoestring/wizard/styles.py:39
 msgid "wizard-toggle-enabled"
-msgstr "有効でございますわ。💖うふふっ💕"
+msgstr "有効でございますわ💖"
 
 #: shoestring/wizard/__main__.py:55
 msgid "wizard-validation-error-text"
@@ -819,35 +819,35 @@ msgstr "投票者設定でございますわ。💖うふふっ💕"
 
 #: shoestring/wizard/screens/voting.py:18
 msgid "wizard-voting-token-active"
-msgstr "投票者役割でございますわ。💖うふふっ💕"
+msgstr "投票者役割でございますわ。💕"
 
 #: shoestring/wizard/screens/welcome.py:29
 msgid "wizard-welcome-command-token"
-msgstr "コマンドでございますわ。💖うふふっ💕"
+msgstr "コマンドでございますわ。💕"
 
 #: shoestring/wizard/screens/welcome.py:38
 msgid "wizard-welcome-import-bootstrap"
-msgstr "bootstrapからインポートいたしますわ。💖うふふっ💕"
+msgstr "nodeをimport💖　"
 
 #: shoestring/wizard/screens/welcome.py:41
 msgid "wizard-welcome-renew-certificates"
-msgstr "証明書を更新いたしますわ。💖うふふっ💕"
+msgstr "証明書を更新💖　　　　　　　"
 
 #: shoestring/wizard/screens/welcome.py:42
 msgid "wizard-welcome-renew-voting-keys"
-msgstr "投票キーを更新いたしますわ。💖うふふっ💕"
+msgstr "投票キーを更新💖　　　　　　　"
 
 #: shoestring/wizard/screens/welcome.py:40
 msgid "wizard-welcome-reset-data"
-msgstr "データをリセットいたしますわ。💖うふふっ💕"
+msgstr "dataをリセット💖　　　　　"
 
 #: shoestring/wizard/screens/welcome.py:35
 msgid "wizard-welcome-setup"
-msgstr "セットアップいたしますわ。💖うふふっ💕"
+msgstr "セットアップ💖　　　　　　"
 
 #: shoestring/wizard/screens/welcome.py:39
 msgid "wizard-welcome-upgrade"
-msgstr "アップグレードいたしますわ。💖うふふっ💕"
+msgstr "アップグレード💖　　　　　　　"
 
 #: shoestring/wizard/screens/welcome.py:57
 msgid "wizard-welcome-title"
