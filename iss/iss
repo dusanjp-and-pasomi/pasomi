@@ -82,7 +82,7 @@ read ufufu
 echo -e '\e[0m'
 pip install symbol-shoestring
 
--e '\e[45m'
+echo -e '\e[45m'
 echo 
 echo '🌺日本語ファイルをダウンロードをするわ🌺'
 echo -e '\e[0m'
