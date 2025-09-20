@@ -1,5 +1,3 @@
-# shoestring/commands/address.py
-
 import sys
 import os
 import re
@@ -31,7 +29,7 @@ def xxd_epoch(file_path):
             byte2_end = f.read(1)
            
             if not byte1_start or not byte2_start or not byte1_end or not byte2_end:
-                print("Error: File is too short to read specified offsets.")
+                print("おや、ファイルが短すぎて指定の位置を読み取れませんでしたわ。💖うふふっ💕")
                 return
            
             hex_start = byte1_start.hex() + byte2_start.hex()
@@ -39,12 +37,12 @@ def xxd_epoch(file_path):
             hex_end = byte1_end.hex() + byte2_end.hex()
             dec_end = int(hex_end, 16)
            
-            print("StartEpoch:\t" + str(dec_start))
-            print("EndEpoch:\t" + str(dec_end))
+            print(f"開始エポック:\t{dec_start}\tでございますわ。💖うふふっ💕")
+            print(f"終了エポック:\t{dec_end}\tでございますわ。💖うふふっ💕")
     except FileNotFoundError:
-        print(f"Error: File '{file_path}' not found.")
+        print(f"おや、'{file_path}' というファイルが見つかりませんでしたわ。💖うふふっ💕")
     except Exception as e:
-        print(f"Error: {e}")
+        print(f"あら、問題が起きましたわ：{e} でございますわ。💖うふふっ💕")
 
 def xxd_like_dump(file_path, start_offset=0x0020, end_offset=0x003f, lines_per_page=24):
     try:
@@ -63,16 +61,16 @@ def xxd_like_dump(file_path, start_offset=0x0020, end_offset=0x003f, lines_per_p
                 offset += 16
                 line_count += 1
                 if line_count % lines_per_page == 0:
-                    input("Press Enter to continue...")
+                    input("どうぞ、続けるにはエンターを押してくださいませ。💖うふふっ💕")
             
-            print(f"publicKey:\t{hex_concatenated}")
+            print(f"公開鍵:\t{hex_concatenated}\tでございますわ。💖うふふっ💕")
             xxd_epoch(file_path)
-            print(f"filename:\t{os.path.basename(file_path)}")
+            print(f"ファイル名:\t{os.path.basename(file_path)}\tでございますわ。💖うふふっ💕")
 
     except FileNotFoundError:
-        print(f"Error: File '{file_path}' not found.")
+        print(f"おや、'{file_path}' というファイルが見つかりませんでしたわ。💖うふふっ💕")
     except Exception as e:
-        print(f"Error: {e}")
+        print(f"あら、問題が起きましたわ：{e} でございますわ。💖うふふっ💕")
 
 def process_voting_keys():
     voting_dirs = [
@@ -87,15 +85,15 @@ def process_voting_keys():
             break
     
     if not voting_dir:
-        print("votingKeyはありません。")
+        print("投票キーはございませんわ。💖うふふっ💕")
         return
     
     files = glob.glob(os.path.join(voting_dir, "private_key_tree*.dat"))
     if not files:
-        print("votingKeyはありません。")
+        print("投票キーはございませんわ。💖うふふっ💕")
         return
     
-    print("votingKey情報:\t")
+    print("投票キー情報をお伝えいたしますわ:\t💖うふふっ💕")
     def get_number(filename):
         match = re.search(r'private_key_tree(\d+)\.dat', filename)
         return int(match.group(1)) if match else 0
@@ -117,7 +115,7 @@ def get_network_name(config_path):
                 return config.get("network", "name", fallback="testnet")
         except Exception:
             continue
-    print("shoestring.ini が見つかりませんでした。デフォルトの 'testnet' を使用します。")
+    print("shoestring.ini が見つかりませんでしたわ。デフォルトの 'testnet' を使用いたしますわ。💖うふふっ💕")
     return "testnet"
 
 def read_public_keys_from_pem_chain(cert_path):
@@ -145,7 +143,7 @@ def read_public_keys_from_pem_chain(cert_path):
                 return public_keys
         except Exception:
             continue
-    print(f"{os.path.basename(cert_path)} が見つかりませんでした。")
+    print(f"{os.path.basename(cert_path)} が見つかりませんでしたわ。💖うふふっ💕")
     return []
 
 def read_private_key_from_pem(pem_path):
@@ -166,16 +164,16 @@ def read_private_key_from_pem(pem_path):
                         ca_key_data, password=None, backend=default_backend()
                     )
                 except (ValueError, TypeError):
-                    password = getpass(f"Enter password for {os.path.basename(path)}: ")
+                    password = getpass(f"{os.path.basename(path)} のパスワードを教えてくださいませ：💖うふふっ💕")
                     if not password:
-                        print(f"Password not provided for {os.path.basename(path)}.")
+                        print(f"{os.path.basename(path)} のパスワードが入力されませんでしたわ。💖うふふっ💕")
                         continue
                     try:
                         private_key_obj = serialization.load_pem_private_key(
                             ca_key_data, password=password.encode('utf-8'), backend=default_backend()
                         )
                     except Exception as e:
-                        print(f"Failed to decrypt {os.path.basename(path)}: Invalid password or corrupted key.")
+                        print(f"{os.path.basename(path)} の復号に失敗しましたわ：パスワードが正しくないか、キーが壊れているようですわ。💖うふふっ💕")
                         continue
                 der_bytes = private_key_obj.private_bytes(
                     encoding=serialization.Encoding.DER,
@@ -185,7 +183,7 @@ def read_private_key_from_pem(pem_path):
                 return der_bytes.hex().upper()
         except FileNotFoundError:
             continue
-    print(f"{os.path.basename(pem_path)} が見つかりませんでした。")
+    print(f"{os.path.basename(pem_path)} が見つかりませんでしたわ。💖うふふっ💕")
     return None
 
 def show_account_info(args, facade, account_type, private_key_path, cert_index, label):
@@ -203,27 +201,27 @@ def show_account_info(args, facade, account_type, private_key_path, cert_index, 
             args.keys_path + "/cert/node.full.crt.pem"
         )
         if not cert_public_keys or len(cert_public_keys) <= cert_index:
-            print(f"証明書から{label}公開鍵の取得に失敗しました。")
+            print(f"{label}公開鍵を証明書から取得できませんでしたわ。💖うふふっ💕")
             return
         cert_public_key = PublicKey(cert_public_keys[cert_index])
         cert_public_account = facade.create_public_account(cert_public_key)
         if private_public_key is not None and private_public_key != cert_public_key:
-            print(f"{label}証明書の秘密鍵と公開鍵が一致しません。")
+            print(f"{label}証明書の秘密鍵と公開鍵が一致しませんわ。💖うふふっ💕")
             return
     
-    print(f"{label}アカウント情報:\t")
+    print(f"{label}アカウント情報をご覧くださいませ:\t💖うふふっ💕")
     if cert_public_account:
-        print(f"アドレス:\t{cert_public_account.address}")
-        print(f"公開鍵:\t\t{cert_public_key}")
+        print(f"アドレス:\t{cert_public_account.address}\tでございますわ。💖うふふっ💕")
+        print(f"公開鍵:\t\t{cert_public_key}\tでございますわ。💖うふふっ💕")
     elif private_public_key is not None:
         account = facade.create_public_account(private_public_key)
-        print(f"アドレス:\t{account.address}")
-        print(f"公開鍵:\t\t{private_public_key}")
+        print(f"アドレス:\t{account.address}\tでございますわ。💖うふふっ💕")
+        print(f"公開鍵:\t\t{private_public_key}\tでございますわ。💖うふふっ💕")
     else:
-        print(f"{label}キーの秘密鍵が読み込めませんでした。")
+        print(f"{label}キーの秘密鍵を読み込めませんでしたわ。💖うふふっ💕")
         return
     if args.show_private_key and private_key_hex is not None:
-        print(f"秘密鍵:\t\t{private_key_hex}")
+        print(f"秘密鍵:\t\t{private_key_hex}\tでございますわ。💖うふふっ💕")
     print()
 
 def show_all_keys(args):
@@ -234,11 +232,11 @@ def show_all_keys(args):
     show_account_info(args, facade, "vrf", args.keys_path + VRF_KEY_PEM, None, "VRF")
 
 async def link_node_keys(args):
-    print("ノードキーをリンクする機能はまだ実装されていません。")
+    print("ノードキーをリンクする機能はまだ実装されておりませんわ。💖うふふっ💕")
     return None
 
 async def unlink_node_keys(args):
-    print("ノードキーをアンリンクする機能はまだ実装されていません。")
+    print("ノードキーをアンリンクする機能はまだ実装されておりませんわ。💖うふふっ💕")
     return None
 
 def show_voting_keys(args):
@@ -248,19 +246,19 @@ def get_common_showkey_args():
     parent = argparse.ArgumentParser(add_help=False)
     parent.add_argument(
         "-c", "--config", type=str, default="shoestring/shoestring.ini",
-        help="ノードコンフィグパス[default: shoestring/shoestring.ini]"
+        help="ノードコンフィグのパスでございますわ[デフォルト: shoestring/shoestring.ini]💖うふふっ💕"
     )
     parent.add_argument(
         "-ca", "--ca-key-path", type=str, default="ca.key.pem",
-        help="CA証明書パス[default: ca.key.pem]"
+        help="CA証明書のパスでございますわ[デフォルト: ca.key.pem]💖うふふっ💕"
     )
     parent.add_argument(
         "-k", "--keys-path", type=str, default="keys",
-        help="keysディレクトリパス[default: keys]"
+        help="keysディレクトリのパスでございますわ[デフォルト: keys]💖うふふっ💕"
     )
     parent.add_argument(
         "-p", "--show-private-key", action="store_true",
-        help="プライベートキーを表示する"
+        help="プライベートキーを表示いたしますわ💖うふふっ💕"
     )
     return parent
 
@@ -268,16 +266,16 @@ def get_common_link_args():
     parent = argparse.ArgumentParser(add_help=False)
     parent.add_argument(
         "-c", "--config", type=str, default="shoestring/shoestring.ini",
-        help="ノードコンフィグパス[default: shoestring/shoestring.ini]"
+        help="ノードコンフィグのパスでございますわ[デフォルト: shoestring/shoestring.ini]💖うふふっ💕"
     )
     parent.add_argument(
         "-k", "--keys-path", type=str, default="keys",
-        help="keysディレクトリパス[default: keys]"
+        help="keysディレクトリのパスでございますわ[デフォルト: keys]💖うふふっ💕"
     )
     return parent
 
 class CustomHelpFormatter(argparse.RawTextHelpFormatter):
-    """サブコマンドのヘルプをタブで揃えるカスタムフォーマッター"""
+    """サブコマンドのヘルプをタブで揃えるカスタムフォーマッターでございますわ"""
     def _format_action(self, action):
         if isinstance(action, argparse._SubParsersAction):
             parts = []
@@ -285,7 +283,7 @@ class CustomHelpFormatter(argparse.RawTextHelpFormatter):
             parts.append('\n')
             subcommands = [
                 ('show-key', 'すべてのノードキー情報を表示いたしますわ。💖うふふっ💕'),
-                ('show-key -p', 'すべてのノードキー情報を表示いたしますわ。💖うふふっ💕（秘密鍵も表示するの💖）'),
+                ('show-key -p', 'すべてのノードキー情報を表示いたしますわ（秘密鍵も含めてでございますわ）。💖うふふっ💕'),
                 ('link', 'ハーベスティングリンクいたしますわ。💖うふふっ💕'),
                 ('unlink', 'ハーベスティングアンリンクいたしますわ。💖うふふっ💕'),
                 ('show-voting', '投票キー情報を表示いたしますわ。💖うふふっ💕'),
@@ -297,7 +295,7 @@ class CustomHelpFormatter(argparse.RawTextHelpFormatter):
         return super()._format_action(action)
 
 class CustomArgumentParser(argparse.ArgumentParser):
-    """カスタムパーサーでエラー時のヘルプ表示を抑制し、フォーマッターを適用"""
+    """カスタムパーサーでエラー時のヘルプ表示を抑制し、フォーマッターを適用いたしますわ"""
     def __init__(self, *args, **kwargs):
         kwargs['formatter_class'] = CustomHelpFormatter
         super().__init__(*args, **kwargs)
@@ -309,44 +307,42 @@ class CustomArgumentParser(argparse.ArgumentParser):
         self._print_message(self.format_help(), file)
 
 def add_arguments(parser):
-    """addressサブコマンドの引数を定義"""
-    # parser を CustomArgumentParser に置き換え
+    """addressサブコマンドの引数を定義いたしますわ"""
     custom_parser = CustomArgumentParser(
         prog=parser.prog,
         description=parser.description,
         formatter_class=CustomHelpFormatter,
-        add_help=True  # -h を有効化
+        add_help=True
     )
     custom_parser.set_defaults(func=main)
     subparsers = custom_parser.add_subparsers(title="サブコマンド", metavar="", dest="command", required=False)
     
     show_common_args = [get_common_showkey_args()]
     show_parser = subparsers.add_parser(
-        "show-key", help="すべてのノードキー情報を表示", parents=show_common_args, add_help=True
+        "show-key", help="すべてのノードキー情報を表示いたしますわ💖うふふっ💕", parents=show_common_args, add_help=True
     )
     show_parser.set_defaults(func=show_all_keys)
     
     link_common_args = [get_common_link_args()]
     link_parser = subparsers.add_parser(
-        "link", help="ハーベスティングリンク", parents=link_common_args, add_help=True
+        "link", help="ハーベスティングリンクいたしますわ💖うふふっ💕", parents=link_common_args, add_help=True
     )
     link_parser.set_defaults(func=link_node_keys)
     
     unlink_parser = subparsers.add_parser(
-        "unlink", help="ハーベスティングアンリンク", parents=link_common_args, add_help=True
+        "unlink", help="ハーベスティングアンリンクいたしますわ💖うふふっ💕", parents=link_common_args, add_help=True
     )
     unlink_parser.set_defaults(func=unlink_node_keys)
     
     voting_parser = subparsers.add_parser(
-        "show-voting", help="投票キー情報を表示", parents=[], add_help=True
+        "show-voting", help="投票キー情報を表示いたしますわ💖うふふっ💕", parents=[], add_help=True
     )
     voting_parser.set_defaults(func=show_voting_keys)
     
-    # 元の parser にカスタムパーサーの設定を反映
     parser.__dict__.update(custom_parser.__dict__)
 
 async def main(args):
-    """addressサブコマンドのメイン処理"""
+    """addressサブコマンドのメイン処理でございますわ"""
     if not hasattr(args, 'config'):
         args.config = "shoestring/shoestring.ini"
     if not hasattr(args, 'ca_key_path'):
