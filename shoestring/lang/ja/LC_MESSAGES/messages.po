@@ -852,3 +852,6 @@ msgstr "アップグレード💖　　　　　　　"
 #: shoestring/wizard/screens/welcome.py:57
 msgid "wizard-welcome-title"
 msgstr "ごきげんようでございますわ。💖うふふっ💕"
+
+msgid "main-address-help"
+msgstr "アドレスおよびキー情報の表示と管理ですわ。💖うふふっ💕"
