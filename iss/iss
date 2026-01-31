@@ -82,17 +82,17 @@ read ufufu
 echo -e '\e[0m'
 pip install symbol-shoestring
 
-echo -e '\e[45m'
-echo 
-echo '🌺日本語ファイルをダウンロードをするわ🌺'
-echo -e '\e[0m'
-jpLangPath=$(pip show symbol-shoestring | grep Location | sed 's/Location: //')/shoestring/lang/ja/LC_MESSAGES
+#echo -e '\e[45m'
+#echo 
+#echo '🌺日本語ファイルをダウンロードをするわ🌺'
+#echo -e '\e[0m'
+#jpLangPath=$(pip show symbol-shoestring | grep Location | sed 's/Location: //')/shoestring/lang/ja/LC_MESSAGES
 
-cd $jpLangPath
-rm -f *
-wget https://github.com/ccHarvestasya/product/raw/refs/heads/shoestring/japanese_lang_support/tools/shoestring/shoestring/lang/ja/LC_MESSAGES/messages.po
+#cd $jpLangPath
+#rm -f *
+#wget https://github.com/ccHarvestasya/product/raw/refs/heads/shoestring/japanese_lang_support/tools/shoestring/shoestring/lang/ja/LC_MESSAGES/messages.po
 
-msgfmt messages.po -o messages.mo
+#msgfmt messages.po -o messages.mo
 
 
 echo -e '\e[45m'
